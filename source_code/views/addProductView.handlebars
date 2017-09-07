@@ -1,0 +1,52 @@
+<div class="table-responsive">
+    <form method="post" action="/admin/{{userAdmin}}/add">
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th>Product Name: </th>
+                <td><input type="text" name="pname"></td>
+            </tr>
+            <tr>
+                <th>Category: </th>
+                <td>
+                    <input type="radio" name="category" value="Greeting Cards"> Greeting Cards<br>
+                    <input type="radio" name="category" value="Notebook"> Notebook<br>
+                    <input type="radio" name="category" value="Stationery"> Stationery<br>
+                    <input type="radio" name="category" value="Easter Gifts"> Easter Gifts<br>
+                    <input type="radio" name="category" value="Bath & Body"> Bath & Body<br>
+                    <input type="radio" name="category" value="Candles"> Candles<br>
+                </td>
+            </tr>
+            <tr>
+                <th>Description: </th>
+                <td>
+                    <textarea rows="4" cols="50" name="description"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>Price: </th>
+                <td><input type="text" name="price"></td>
+            </tr>
+            <tr>
+                <th>Quantity: </th>
+                <td><input type="text" name="quantity"></td>
+            </tr>
+            <tr>
+                <th>Product Image: </th>
+                <td>
+                    <input type="file" name="pic" accept="image/*">
+                </td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save" class="btn btn-success">
+                        <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelEditProduct('{{userAdmin}}')">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

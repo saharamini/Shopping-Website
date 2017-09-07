@@ -1,0 +1,31 @@
+<div class="flex-container" style="width: 75%">
+    <div style="text-align: left;" class="viewProduct">
+        <table>
+            <thead></thead>
+            <tbody>
+            <tr><td><b>First Name: </b>{{data.userFirstname}}</td></tr>
+            <tr><td><b>Last Name: </b>{{data.userLastname}}</td></tr>
+            <tr><td><b>Gender: </b>{{data.userGender}}</td></tr>
+            <tr><td><b>Username: </b>{{data.userID}}</td></tr>
+            <tr><td><b>Password: </b>{{data.userPassword}}</td></tr>
+            <tr><td><b>Email Address: </b>{{data.userEmail}}</td></tr>
+            </tbody>
+            <tfooter></tfooter>
+        </table>
+    </div>
+    <div style="text-align: left;" class="viewProduct">
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr><td><b>Address: </b>{{data.userAddress}}</td></tr>
+                <tr><td><b>City: </b>{{data.userCity}}</td></tr>
+                <tr><td><b>State: </b>{{data.userState}}</td></tr>
+                <tr><td><b>Zip Code: </b>{{data.userZipCode}}</td></tr>
+                <tr><td><b>Phone Number: </b>{{data.userPhone}}</td></tr>
+            </tbody>
+            <tfooter>
+            </tfooter>
+        </table>
+    </div>
+</div>
+<div>  <input type="button" value="Back" class="btn btn-info" onclick="window.location.href='/admin/{{idAdmin}}/clients'; "></div>

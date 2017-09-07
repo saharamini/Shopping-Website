@@ -1,0 +1,28 @@
+<div class="flex-container" style="width: 75%">
+    <div><img src={{data.imageURL}}></div>
+    <div style="text-align: left;" class="viewProduct">
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr><td><b>{{data.productName}}</b></td></tr>
+                <tr><td><b><em>Category: </em></b>{{data.category}}</td></tr>
+                <tr><td><b><em>Price: </em></b><b>$</b>{{data.price}}</td></tr>
+                <tr><td>{{data.description}}</td></tr>
+                <tr><td><em>Only </em><b>{{data.quantity}}</b><em> left </em></td></tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td>
+                        <input style="width:50px; text-align: center;" type="text" name="clientQuantity" value="1" id="clientQuantity">
+                        {{#if data.disable}}
+                            <button disabled class="btn btn-primary">Add to Bag</button>
+                            {{else}}
+                            <button class="btn btn-primary" onClick="addToBag('{{data.id}}',document.getElementById('clientQuantity').value);">Add to Bag</button>
+                        {{/if}}
+                        <input type="button" value="Cancel" class="btn btn-danger" onclick="window.location.href = '/products'";>
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </div>
+</div>

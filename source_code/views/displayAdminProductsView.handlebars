@@ -1,0 +1,37 @@
+<ul>
+    <li><a href="/admin/{{userAdmin}}/clients">List of Clients</a></li>
+    <li><a href="/admin/{{userAdmin}}/products">List of Products</a></li>
+    <li><a href="/admin/{{userAdmin}}/addProduct">Add a Product</a></li>
+    <li><a href="/admin/{{userAdmin}}/orders">List of Orders</a></li>
+    <li><a href="/admin/{{userAdmin}}/search">Search</a></li>
+</ul>
+<div style="margin-left:11%;padding:1px 16px;height:auto;">
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each data}}
+                <tr>
+                    <td>{{this.productName}}</td>
+                    <td>{{this.category}}</td>
+                    <td><b>$ </b>{{this.price}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="/admin/{{this.user}}/products/view/{{this.id}}">View</a>
+                        <a class="btn btn-primary" href="/admin/{{this.user}}/products/edit/{{this.id}}">Edit</a>
+                        <a class="btn btn-primary" href="/admin/{{this.user}}/products/delete/{{this.id}}">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+            <tfooter>
+            </tfooter>
+        </table>
+    </div>
+</div>

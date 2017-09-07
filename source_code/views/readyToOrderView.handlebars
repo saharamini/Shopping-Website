@@ -1,0 +1,37 @@
+<ul>
+    <li><a href="/customer/{{client_ID}}/info">Edit Account</a></li>
+    <li><a href="/customer/{{client_ID}}/orders">Checkout</a></li>
+    <li><a href="/customer/{{client_ID}}/status">Order status</a></li>
+</ul>
+<div style="margin-left:11%;padding:1px 16px;height:auto;">
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each productInfo}}
+                <tr>
+                    <td>{{this.product_Name}}</td>
+                    <td>{{this.product_Quantity}}</td>
+                    <td><b>$</b>{{this.product_Price}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="/remove/shoppingBag/{{this.product_ID}}">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+            <tfooter>
+            </tfooter>
+        </table>
+    </div>
+    <div>
+        <b>Total Price: $</b> {{total}}
+    </div>
+    <div style="padding-top: 20px;"><a class="btn btn-success" href="/sendOrder/{{client_ID}}">Submit</a></div>
+</div>

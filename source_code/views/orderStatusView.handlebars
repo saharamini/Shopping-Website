@@ -1,0 +1,31 @@
+<ul>
+    <li><a href="/customer/{{customer_ID}}/info">Edit Account</a></li>
+    <li><a href="/customer/{{customer_ID}}/orders">Checkout</a></li>
+    <li><a href="/customer/{{customer_ID}}/status">Order status</a></li>
+</ul>
+<div style="margin-left:11%;padding:1px 16px;height:auto;">
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each data}}
+                <tr>
+                    <td>{{this.productName}}</td>
+                    <td><b>$</b>{{this.productPrice}}</td>
+                    <td>{{this.orderDate}}</td>
+                    <td>{{this.orderStatus}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+            <tfooter>
+            </tfooter>
+        </table>
+    </div>
+</div>

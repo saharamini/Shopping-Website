@@ -1,0 +1,57 @@
+<ul>
+    <li><a href="/admin/{{userAdmin}}/clients">List of Clients</a></li>
+    <li><a href="/admin/{{userAdmin}}/products">List of Products</a></li>
+    <li><a href="/admin/{{userAdmin}}/addProduct">Add a Product</a></li>
+    <li><a href="/admin/{{userAdmin}}/orders">List of Orders</a></li>
+    <li><a href="/admin/{{userAdmin}}/search">Search</a></li>
+</ul>
+<div style="float: right">  <input type="button" value="Back" class="btn btn-info" onclick="window.location.href='/admin/{{userAdmin}}/searchAdminOrders'; "></div>
+{{#each data}}
+<div class="flex-container" style="width: 75%">
+    <div style="text-align: left;" class="viewProduct">
+        <table>
+            <thead></thead>
+            <tbody>
+            <tr><td><b>First Name: </b>{{this.user_Firstname}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Last Name: </b>{{this.user_Lastname}}</td></tr>
+            <tr><td><b>Phone: </b>{{this.user_Phone}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Email: </b>{{this.user_Email}}</td></tr>
+            <tr><td><b>Address: </b>{{this.user_Address}}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> City: </b>{{this.user_City}}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> State: </b>{{this.user_State }}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Zip Code: </b>{{this.user_ZipCode }}
+            </td></tr>
+            </tbody>
+            <tfooter></tfooter>
+        </table>
+    </div>
+</div>
+<div>
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Quantity</th>
+                <th>Product Price</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{this.product_Name}}</td>
+                    <td>{{this.product_Quantity}}</td>
+                    <td><b>$</b>{{this.product_Price}}</td>
+                    <td>{{this.order_Date}}</td>
+                    <td>{{this.order_Status}}</td>
+                    <td><a class="btn btn-success" href="/ready/{{this.admin}}/{{this.order_ID}}">Ready</a></td>
+                    <td><a class="btn btn-danger" href="/notReady/{{this.admin}}/{{this.order_ID}}">Not Ready</a></td>
+                </tr>
+            </tbody>
+            <tfooter>
+            </tfooter>
+        </table>
+    </div>
+</div>
+{{/each}}

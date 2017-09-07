@@ -1,0 +1,46 @@
+<ul>
+    <li><a href="/admin/{{admin}}/clients">List of Clients</a></li>
+    <li><a href="/admin/{{admin}}/products">List of Products</a></li>
+    <li><a href="/admin/{{admin}}/addProduct">Add a Product</a></li>
+    <li><a href="/admin/{{admin}}/orders">List of Orders</a></li>
+    <li><a href="/admin/{{admin}}/search">Search</a></li>
+</ul>
+
+<div class="table-responsive" style="margin-left:11%;padding:1px 16px;height:auto;">
+    <form method="post" action='/admin/{{admin}}/search/products' id="searchForm">
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th width="8%">Product Name: </th>
+                <td><input type="text" name="fproductName" placeholder="Product Name" size="40" value=""></td>
+            </tr>
+            <tr>
+                <th>Category: </th>
+                <td>
+                    <select name="categoryList" form="searchForm">
+                        <option value="">Select</option>
+                        <option value="Greeting Cards">Greeting Cards</option>
+                        <option value="Notebook">Notebook</option>
+                        <option value="Stationery">Stationery</option>
+                        <option value="Easter Gifts">Easter Gifts</option>
+                        <option value="Bath & Body">Bath & Body</option>
+                        <option value="Candles">Candles</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Price: </th>
+                <td><b>$ </b><input type="text" name="fprice" placeholder="Price" size="20" value=""></td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Search" class="btn btn-success">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

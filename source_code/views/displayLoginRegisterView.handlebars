@@ -1,0 +1,32 @@
+{{#if error}}
+    <div class="err">We were unable to find that username and password in our system.</div>
+{{/if}}
+<div class="flex-login">
+    <div>
+        <p><b>I Have an Account</b></p>
+        <p>Welcome back! To access your account, please enter your email and password and click Sign In.</p>
+        <form method="post" action='/login' id="loginForm" class="login">
+            <div style="text-align: center; padding-top: 10px;">
+                <label><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+            <div style="text-align: center;">
+                <label><b>Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="Login" class="btn btn-success">
+            </div>
+
+            <div style="background-color:#f1f1f1;">
+                <span class="psw">Forgot <a href="mailto:someone@ABCstore.com?Subject=Request%20for%20password%20change" target="_top">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <div>
+        <p><b>Create an Account</b></p>
+        <p>Welcome! Creating an account will give you access to all of the great features of our site</p>
+        <input type="submit" value="Register" class="btn btn-success" onclick="createAccount()">
+    </div>
+</div>
+

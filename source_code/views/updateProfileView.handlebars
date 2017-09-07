@@ -1,0 +1,64 @@
+<ul>
+    <li><a href="/customer/{{customer_ID}}/info">Edit Account</a></li>
+    <li><a href="/customer/{{customer_ID}}/orders">Checkout</a></li>
+    <li><a href="/customer/{{customer_ID}}/status">Order status</a></li>
+</ul>
+<div class="table-responsive">
+    <form method="post" action='/customer/{{customer_ID}}/update'>
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th style="text-align: right;">First Name: </th>
+                <td><input type="text" name="fname" value="{{data.userFirstname}}" readonly></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Last Name: </th>
+                <td><input type="text" name="lname" value="{{data.userLastname}}" readonly></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Username: </th>
+                <td><input type="text" name="username" value="{{data.userID}}"></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Password: </th>
+                <td><input type="text" name="password" value="{{data.userPassword}}"></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Email Address: </th>
+                <td><input type="text" name="email" value="{{data.userEmail}}"></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Address: </th>
+                <td>
+                    <textarea rows="3" cols="50" name="address">{{data.userAddress}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">City: </th>
+                <td><input type="text" name="city" value="{{data.userCity}}"></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">State: </th>
+                <td><input type="text" name="state" value="{{data.userState}}"></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Zip Code: </th>
+                <td><input type="text" name="zipCode" value="{{data.userZipCode}}"></td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">Phone Number: </th>
+                <td><input type="text" name="phone" value="{{data.userPhone}}"></td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save" class="btn btn-success">
+                        <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelUpdateInfo('{{customer_ID}}')">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

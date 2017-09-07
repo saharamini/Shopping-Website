@@ -1,0 +1,47 @@
+<ul>
+    <li><a href="/products/GreetingCards">Greeting Cards</a></li>
+    <li><a href="/products/Notebook">Notebook</a></li>
+    <li><a href="/products/Stationery">Stationery</a></li>
+    <li><a href="/products/EasterGifts">Easter Gifts</a></li>
+    <li><a href="/products/BathBody">Bath & Body</a></li>
+    <li><a href="/products/Candles">Candles</a></li>
+</ul>
+
+<div class="table-responsive" style="margin-left:11%;padding:1px 16px;height:auto;">
+    <form method="post" action='/search/products' id="searchForm">
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th width="8%">Product Name: </th>
+                <td><input type="text" name="fproductName" placeholder="Product Name" size="40" value=""></td>
+            </tr>
+            <tr>
+                <th>Category: </th>
+                <td>
+                    <select name="categoryList" form="searchForm">
+                        <option value="">Select</option>
+                        <option value="Greeting Cards">Greeting Cards</option>
+                        <option value="Notebook">Notebook</option>
+                        <option value="Stationery">Stationery</option>
+                        <option value="Easter Gifts">Easter Gifts</option>
+                        <option value="Bath & Body">Bath & Body</option>
+                        <option value="Candles">Candles</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Price: </th>
+                <td><b>$ </b><input type="text" name="fprice" placeholder="Price" size="20" value=""></td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Search" class="btn btn-success">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

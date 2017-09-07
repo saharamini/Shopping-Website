@@ -1,0 +1,54 @@
+<div class="table-responsive">
+    <form method="post" action='/admin/{{adminID}}/products/edit/{{data.id}}'>
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th>Product Name: </th>
+                <td><input type="text" name="pname" value="{{data.productName}}"></td>
+            </tr>
+            <tr>
+                <th>Category: </th>
+                <td>
+                    <input type="text" name="preCategory" value="{{data.category}}" readonly><br>
+                    <input type="radio" name="category" value="Greeting Cards"> Greeting Cards<br>
+                    <input type="radio" name="category" value="Notebook"> Notebook<br>
+                    <input type="radio" name="category" value="Stationery"> Stationery<br>
+                    <input type="radio" name="category" value="Easter Gifts"> Easter Gifts<br>
+                    <input type="radio" name="category" value="Bath & Body"> Bath & Body<br>
+                    <input type="radio" name="category" value="Candles"> Candles<br>
+                </td>
+            </tr>
+            <tr>
+                <th>Description: </th>
+                <td>
+                    <textarea rows="4" cols="50" name="description">{{data.description}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>Price: </th>
+                <td><input type="text" name="price" value="{{data.price}}"></td>
+            </tr>
+            <tr>
+                <th>Quantity: </th>
+                <td><input type="text" name="quantity" value="{{data.quantity}}"></td>
+            </tr>
+            <tr>
+                <th>Product Image: </th>
+                <td>
+                    <input type="file" name="pic" accept="image/*">
+                    <img src="{{data.imageURL}}">
+                </td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save" class="btn btn-success">
+                        <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelEditProduct('{{adminID}}')">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

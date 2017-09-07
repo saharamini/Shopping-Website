@@ -1,0 +1,75 @@
+<div class="table-responsive">
+    <form method="post" action='/admin/{{adminID}}/clients/edit/{{data.id}}'>
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th>First Name: </th>
+                <td><input type="text" name="fname" value="{{data.userFirstname}}"></td>
+            </tr>
+            <tr>
+                <th>Last Name: </th>
+                <td><input type="text" name="lname" value="{{data.userLastname}}"></td>
+            </tr>
+            <tr>
+                <th>Gender: </th>
+                <td>
+                    <input type="text" name="preGender" value="{{data.userGender}}" readonly><br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                </td>
+            </tr>
+            <tr>
+                <th>Username: </th>
+                <td><input type="text" name="username" value="{{data.userID}}"></td>
+            </tr>
+            <tr>
+                <th>Password: </th>
+                <td><input type="text" name="password" value="{{data.userPassword}}"></td>
+            </tr>
+            <tr>
+                <th>Email Address: </th>
+                <td><input type="text" name="email" value="{{data.userEmail}}"></td>
+            </tr>
+            <tr>
+                <th>Address: </th>
+                <td>
+                    <textarea rows="3" cols="50" name="address">{{data.userAddress}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>City: </th>
+                <td><input type="text" name="city" value="{{data.userCity}}"></td>
+            </tr>
+            <tr>
+                <th>State: </th>
+                <td><input type="text" name="state" value="{{data.userState}}"></td>
+            </tr>
+            <tr>
+                <th>Zip Code: </th>
+                <td><input type="text" name="zipCode" value="{{data.userZipCode}}"></td>
+            </tr>
+            <tr>
+                <th>Phone Number: </th>
+                <td><input type="text" name="phone" value="{{data.userPhone}}"></td>
+            </tr>
+            <tr>
+                <th>User Type: </th>
+                <td>
+                    <input type="text" name="userType" value="{{data.userType}}" readonly><br>
+                    <input type="radio" name="type" value="customer"> Customer<br>
+                    <input type="radio" name="type" value="admin"> Admin<br>
+                </td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save" class="btn btn-success">
+                        <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelEditClient('{{adminID}}')">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

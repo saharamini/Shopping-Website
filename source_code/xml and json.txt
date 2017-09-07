@@ -1,0 +1,73 @@
+Customers:
+ 
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/customers"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/customers"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/customers"
+
+
+Customer's Lastname and Firstname :
+ 
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/customers/:fname/:lname"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/customers/:fname/:lname"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/customers/:fname/:lname"
+
+
+Customer ID:
+
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/customers/:id"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/customers/:id"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/customers/:id"
+
+//------------------------------------------------------------------------------------------
+
+Products:
+ 
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/products"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/products"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/products"
+
+
+Product's Name:
+ 
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/products/:name"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/products/:name"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/products/:name"
+
+
+Product ID:
+
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/products/:id"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/products/:id"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/products/:id"
+
+//------------------------------------------------------------------------------------------
+
+Orders:
+ 
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/orders"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/orders"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/orders"
+
+
+
+Order ID:
+
+curl -X GET -H "Accept:application/xml" "http://localhost:3000/api/orders/:id"
+
+curl -X GET -H "Accept:text/plain" "http://localhost:3000/api/orders/:id"
+
+curl -X GET -H "Accept:application/json" "http://localhost:3000/api/orders/:id"

@@ -1,0 +1,38 @@
+<ul>
+    <li><a href="/products/GreetingCards">Greeting Cards</a></li>
+    <li><a href="/products/Notebook">Notebook</a></li>
+    <li><a href="/products/Stationery">Stationery</a></li>
+    <li><a href="/products/EasterGifts">Easter Gifts</a></li>
+    <li><a href="/products/BathBody">Bath & Body</a></li>
+    <li><a href="/products/Candles">Candles</a></li>
+</ul>
+<div style="margin-left:11%;padding:1px 16px;height:auto;">
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each productInfo}}
+                <tr>
+                    <td>{{this.product_Name}}</td>
+                    <td>{{this.product_Quantity}}</td>
+                    <td><b>$</b>{{this.product_Price}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="/products/view/{{this.product_ID}}">View</a>
+                        <a class="btn btn-primary" href="/remove/shoppingBag/{{this.product_ID}}">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+            <tfooter>
+            </tfooter>
+        </table>
+    </div>
+    <div>  <a class="btn btn-success" href="/loginRegisterView">Checkout</a></div>
+</div>

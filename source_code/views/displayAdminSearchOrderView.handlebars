@@ -1,0 +1,40 @@
+<ul>
+    <li><a href="/admin/{{admin}}/clients">List of Clients</a></li>
+    <li><a href="/admin/{{admin}}/products">List of Products</a></li>
+    <li><a href="/admin/{{admin}}/addProduct">Add a Product</a></li>
+    <li><a href="/admin/{{admin}}/orders">List of Orders</a></li>
+    <li><a href="/admin/{{admin}}/search">Search</a></li>
+</ul>
+
+<div class="table-responsive" style="margin-left:11%;padding:1px 16px;height:auto;">
+    <form method="post" action='/admin/{{admin}}/search/orders' id="searchForm">
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th>Order Status: </th>
+                <td>
+                    <input type="radio" name="status" value="ready"> Ready for pick up<br>
+                    <input type="radio" name="status" value="notReady"> Not Ready for pick up<br>
+                </td>
+            </tr>
+            <tr>
+                <th>Order Date: </th>
+                <td>
+                    <label>From:</label>
+                    <input type="date" name="dateFrom" placeholder="From"  value="">
+                    <label>To:</label>
+                    <input type="date" name="dateTo" placeholder="To" value="">
+                </td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Search" class="btn btn-success">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>

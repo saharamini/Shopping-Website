@@ -1,0 +1,54 @@
+<ul>
+    <li><a href="/admin/{{admin}}/clients">List of Clients</a></li>
+    <li><a href="/admin/{{admin}}/products">List of Products</a></li>
+    <li><a href="/admin/{{admin}}/addProduct">Add a Product</a></li>
+    <li><a href="/admin/{{admin}}/orders">List of Orders</a></li>
+    <li><a href="/admin/{{admin}}/search">Search</a></li>
+</ul>
+
+<div class="table-responsive" style="margin-left:11%;padding:1px 16px;height:auto;">
+    <form method="post" action='/admin/{{admin}}/search/clients' id="searchForm">
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <th width="8%">First Name: </th>
+                <td><input type="text" name="fname" placeholder="Customer First Name" size="40" value=""></td>
+            </tr>
+            <tr>
+                <th width="8%">Last Name: </th>
+                <td><input type="text" name="lname" placeholder="Customer Last Name" size="40" value=""></td>
+            </tr>
+            <tr>
+                <th>Category: </th>
+                <td>
+                    <select name="genderList" form="searchForm">
+                        <option value="">Select</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td><input type="text" name="fphonenumber" placeholder="Phone Number" size="20" value="" pattern="[0-9]{10}"></td>
+            </tr>
+            <tr>
+                <th width="8%">State: </th>
+                <td><input type="text" name="fstate" placeholder="State" size="40" value=""></td>
+            </tr>
+            <tr>
+                <th>Zip Code: </th>
+                <td><input type="text" name="fzipcode" placeholder="Zip Code" size="20" value="" pattern="[0-9]{4}"></td>
+            </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Search" class="btn btn-success">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+    </form>
+</div>
